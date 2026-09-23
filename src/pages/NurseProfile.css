@@ -1,0 +1,100 @@
+.nurse-profile { --profile-ink: #34232c; --profile-rose: #a53f66; background: #fcf9f5; color: var(--profile-ink); overflow: clip; }
+.profile-hero { display: grid; grid-template-columns: 1.16fr 1fr; align-items: center; gap: 64px; padding-top: 72px; padding-bottom: 82px; }
+.profile-kicker { display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 700; letter-spacing: .19em; color: var(--profile-rose); }
+.profile-kicker > span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.profile-greeting { margin-top: 35px; font-size: 17px; }
+.profile-greeting > span { display: inline-block; margin-left: 10px; color: var(--profile-rose); font-size: 24px; }
+.profile-intro h1 { font-size: clamp(44px, 4.6vw, 67px); line-height: 1.12; font-weight: 500; letter-spacing: -.065em; margin: 15px 0 22px; }
+.nurse-profile em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--profile-rose); letter-spacing: -.045em; }
+.profile-location { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12px; color: #74656c; }
+.profile-location svg { color: var(--profile-rose); }
+.profile-location-divider { height: 12px; width: 1px; background: #d6c8ce; margin: 0 5px; }
+.profile-description { max-width: 455px; font-size: 14px; line-height: 1.95; color: #766971; margin-top: 25px; }
+.profile-actions { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; margin-top: 28px; }
+.profile-button { display: inline-flex; align-items: center; justify-content: center; gap: 17px; padding: 16px 21px; border-radius: 100px; background: var(--profile-rose); color: white; font-size: 12px; font-weight: 600; transition: transform 200ms cubic-bezier(.23,1,.32,1), background-color 200ms; }
+.profile-text-link { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; padding: 10px 0; }
+.nurse-profile a:focus-visible { outline: 3px solid #cf7499; outline-offset: 5px; }
+.profile-intro-note { display: flex; align-items: center; gap: 13px; margin-top: 42px; font-size: 11px; line-height: 1.8; color: #88767e; }
+.profile-intro-note strong { font-weight: 500; color: #57404c; }
+.profile-note-icon { width: 39px; height: 39px; display: grid; place-items: center; border: 1px solid #e6d7db; border-radius: 50%; color: var(--profile-rose); }
+.profile-portrait-wrap { position: relative; margin: 8px 25px 0 8px; }
+.profile-portrait { position: relative; height: 535px; overflow: hidden; border-radius: 180px 180px 18px 18px; background: #cac2b8; }
+.profile-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 43%; transition: transform 650ms cubic-bezier(.23,1,.32,1); }
+.profile-portrait::after { content: ''; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, #241c25b3); }
+.profile-portrait-outline { position: absolute; inset: -12px -12px 12px 12px; border: 1px solid #dcc6ce; border-radius: 190px 190px 23px 23px; transform: rotate(3deg); }
+.profile-portrait figcaption { position: absolute; bottom: 29px; left: 30px; z-index: 1; color: white; }
+.profile-portrait figcaption > span { font-size: 8px; letter-spacing: .23em; }
+.profile-portrait figcaption p { font-size: 31px; line-height: 1.15; margin-top: 10px; letter-spacing: -.045em; }
+.profile-portrait figcaption em { color: #f3d2de; }
+.profile-photo-flower { position: absolute; right: -29px; top: 26px; color: #ac4d70; font-size: 91px; line-height: 1; animation: profile-flower-turn 3s cubic-bezier(.23,1,.32,1) both; }
+.profile-patient-badge { position: absolute; bottom: 40px; right: -25px; display: flex; align-items: center; gap: 13px; padding: 17px 22px; background: #fffaf5; border: 1px solid #ecdedc; border-radius: 16px; box-shadow: 0 12px 35px #38253218; animation: profile-badge-float 4s ease-in-out 700ms 1; }
+.profile-badge-icon { color: var(--profile-rose); background: #f7e8ec; border-radius: 50%; padding: 12px; }
+.profile-patient-badge strong { display: block; font-size: 35px; font-weight: 500; line-height: 1; letter-spacing: -.05em; }
+.profile-patient-badge strong span { font-size: 25px; color: var(--profile-rose); }
+.profile-patient-badge p { margin-top: 5px; font-size: 9px; color: #766971; }
+.profile-photo-caption { position: absolute; right: 0; bottom: -29px; font-size: 8px; letter-spacing: .21em; color: #948089; }
+.profile-belief-strip { border-top: 1px solid #eadddf; border-bottom: 1px solid #eadddf; background: #f7eff0; }
+.profile-belief-strip > div { display: flex; align-items: center; justify-content: space-around; gap: 20px; padding-top: 22px; padding-bottom: 22px; color: #85606e; font-size: 12px; }
+.profile-belief-strip [aria-hidden] { color: #b36f87; font-size: 22px; }
+.profile-journey { padding-top: 88px; padding-bottom: 88px; scroll-margin-top: 100px; }
+.profile-section-heading { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 36px; }
+.nurse-profile h2 { font-size: clamp(30px, 3.1vw, 43px); line-height: 1.2; font-weight: 500; letter-spacing: -.045em; }
+.profile-section-heading h2, .profile-care-content h2 { margin-top: 15px; }
+.profile-section-heading > p { max-width: 330px; font-size: 13px; line-height: 1.9; color: #7b6c73; }
+.profile-journey-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.profile-journey-grid > div { height: 100%; }
+.profile-history-card { padding: 30px 34px; border: 1px solid #e9dedb; background: #fffdf9; border-radius: 20px; height: 100%; }
+.profile-education { background: #f8f0f1; }
+.profile-card-heading { display: flex; gap: 13px; align-items: center; }
+.profile-card-heading h3 { font-size: 17px; font-weight: 600; }
+.profile-card-icon { display: grid; place-items: center; width: 45px; height: 45px; border-radius: 14px; background: #f3e6e9; color: var(--profile-rose); }
+.profile-education .profile-card-icon { background: #fffaf9; }
+.profile-card-index { margin-left: auto; color: #b7a3ac; font-size: 11px; }
+.profile-timeline { margin: 28px 0 0 21px; padding-left: 29px; border-left: 1px solid #e0cdd3; }
+.profile-timeline-item { position: relative; padding-bottom: 32px; }
+.profile-timeline-item:last-child { padding-bottom: 0; }
+.profile-timeline-dot { position: absolute; top: 3px; left: -34px; width: 9px; height: 9px; background: #bd7f96; border-radius: 50%; box-shadow: 0 0 0 5px #fffdf9; }
+.profile-education .profile-timeline-dot { box-shadow: 0 0 0 5px #f8f0f1; }
+.profile-timeline-item > p { font-size: 8px; letter-spacing: .14em; color: #967481; font-weight: 600; }
+.profile-timeline-item h4 { margin: 9px 0 7px; font-size: 21px; font-weight: 500; line-height: 1.4; letter-spacing: -.03em; }
+.profile-timeline-item > span:last-child { font-size: 11px; color: #88757d; }
+.profile-timeline-item .profile-study { display: inline-block; background: #fffaf9; border: 1px solid #e9dce0; padding: 4px 10px; border-radius: 20px; }
+.profile-care-section { background: #f3eeea; padding: 70px 0; }
+.profile-care-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: center; }
+.profile-impact { border-radius: 120px 120px 20px 20px; background: #eadbdf; padding: 44px 38px 35px; text-align: center; max-width: 360px; width: 100%; margin: auto; }
+.profile-impact > svg { margin: auto; color: #995371; }
+.profile-impact-number { font-family: Georgia, serif; font-size: 112px; line-height: 1.1; color: #93415f; letter-spacing: -.07em; margin-top: 18px; }
+.profile-impact-number span { font-size: 64px; vertical-align: top; line-height: 1.5; }
+.profile-impact h2 { font-size: 25px; margin-top: 12px; }
+.profile-impact > p:last-of-type { font-size: 12px; line-height: 1.9; color: #866875; margin-top: 19px; }
+.profile-impact-line { width: 42px; height: 2px; margin: 25px auto 0; background: #bb8296; }
+.profile-principles { margin-top: 27px; }
+.profile-principle { display: flex; gap: 17px; padding: 19px 0; border-bottom: 1px solid #e1d7d4; }
+.profile-principles > div:last-child .profile-principle { border: 0; }
+.profile-principle > span { color: #9d5a74; padding-top: 2px; }
+.profile-principle h3 { font-size: 14px; font-weight: 600; }
+.profile-principle p { font-size: 12px; line-height: 1.85; color: #807079; margin-top: 5px; max-width: 395px; }
+.profile-contact-section { padding-top: 76px; padding-bottom: 76px; }
+.profile-contact { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 1.3fr 1fr; gap: 55px; align-items: center; padding: 52px; border-radius: 24px; background: #663249; color: #fff5f6; }
+.profile-contact .profile-kicker { color: #e6bacb; }
+.profile-contact h2 { margin-top: 18px; font-size: 36px; }
+.profile-contact em { color: #e9b8cb; }
+.profile-contact-copy > p:not(.profile-kicker) { font-size: 12px; line-height: 1.9; color: #e3c7d2; margin-top: 18px; max-width: 355px; }
+.profile-button-light { margin-top: 26px; background: #fff6f2; color: #67334a; }
+.profile-contact-orbit { position: absolute; z-index: -1; width: 540px; height: 540px; right: -260px; top: -220px; border: 1px solid #ffffff14; border-radius: 50%; box-shadow: 0 0 0 55px #ffffff04, 0 0 0 110px #ffffff03; }
+.profile-socials a { display: flex; align-items: center; gap: 15px; padding: 22px 0; border-bottom: 1px solid #ffffff26; font-size: 14px; }
+.profile-socials a > svg:first-child { color: #e6bacb; }
+.profile-socials a > svg:last-child { margin-left: auto; transition: transform 200ms; }
+.profile-socials small { display: block; font-size: 8px; letter-spacing: .13em; color: #dbb2c3; margin-bottom: 7px; }
+.profile-reveal { opacity: 1; transform: none; transition: opacity 650ms cubic-bezier(.23,1,.32,1) var(--reveal-delay), transform 650ms cubic-bezier(.23,1,.32,1) var(--reveal-delay); }
+.profile-reveal-pending { opacity: 0; transform: translateY(22px); }
+.profile-enter { animation: profile-enter 800ms cubic-bezier(.23,1,.32,1) both; }
+@keyframes profile-enter { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes profile-flower-turn { from { opacity: 0; transform: rotate(-65deg); } to { opacity: 1; transform: rotate(0); } }
+@keyframes profile-badge-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@media (hover: hover) and (pointer: fine) { .profile-button:hover { transform: translateY(-3px); background: #883452; } .profile-button-light:hover { background: #f3dbe5; } .profile-portrait:hover img { transform: scale(1.035); } .profile-socials a:hover > svg:last-child { transform: translate(3px,-3px); } .profile-text-link:hover { color: var(--profile-rose); } }
+.profile-button:active { transform: scale(.97); }
+@media (min-width: 1400px) { .profile-hero { gap: 90px; } }
+@media (max-width: 1023px) { .profile-hero { gap: 35px; padding-top: 50px; } .profile-portrait { height: 480px; } .profile-intro h1 { font-size: 46px; } .profile-care-grid { gap: 40px; } .profile-contact { padding: 36px; gap: 30px; } .profile-contact h2 { font-size: 31px; } }
+@media (max-width: 767px) { .profile-hero { grid-template-columns: 1fr; padding-top: 34px; padding-bottom: 58px; gap: 40px; } .profile-greeting { margin-top: 25px; } .profile-intro h1 { font-size: clamp(40px, 8vw, 58px); } .profile-description { font-size: 13px; } .profile-intro-note { display: none; } .profile-actions { gap: 16px; } .profile-portrait-wrap { width: calc(100% - 34px); max-width: 400px; margin: 0 auto; } .profile-portrait { height: 440px; } .profile-patient-badge { right: -12px; bottom: 29px; padding: 14px; } .profile-photo-flower { right: -17px; font-size: 72px; } .profile-belief-strip > div { gap: 10px; font-size: 9px; padding-top: 17px; padding-bottom: 17px; text-align: center; } .profile-belief-strip [aria-hidden] { font-size: 16px; } .profile-journey { padding-top: 54px; padding-bottom: 54px; } .profile-section-heading { display: block; margin-bottom: 26px; } .profile-section-heading > p { margin-top: 20px; max-width: 460px; } .profile-journey-grid { grid-template-columns: 1fr; gap: 16px; } .profile-history-card { padding: 25px; } .profile-timeline-item h4 { font-size: 20px; } .profile-care-section { padding: 46px 0; } .profile-care-grid { grid-template-columns: 1fr; gap: 38px; } .profile-impact { padding: 32px; max-width: 340px; } .profile-impact-number { font-size: 94px; } .profile-care-content { padding: 0 6px; } .profile-contact-section { padding-top: 45px; padding-bottom: 45px; } .profile-contact { grid-template-columns: 1fr; padding: 30px 24px; gap: 18px; } .profile-contact h2 { font-size: 31px; } }
+@media (prefers-reduced-motion: reduce) { .nurse-profile *, .nurse-profile *::before, .nurse-profile *::after { animation: none !important; transition: none !important; } .profile-reveal-pending { opacity: 1; transform: none; } }
