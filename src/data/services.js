@@ -15,6 +15,32 @@ export const services = [
     includes: ['Skrining awal', 'Pemeriksaan tanda vital', 'Tindakan keperawatan', 'Monitoring selama layanan', 'Catatan kunjungan'],
   },
   {
+    id: 'infus-lambung',
+    name: 'Infus Lambung',
+    category: 'Terapi Infus',
+    price: null,
+    duration: 'Durasi dikonfirmasi',
+    icon: Syringe,
+    featured: false,
+    requiresScreening: true,
+    short: 'Pengajuan layanan infus untuk keluhan lambung, dengan skrining dan verifikasi instruksi medis.',
+    description: 'Ajukan kunjungan untuk keluhan lambung. Kebutuhan tindakan dan rincian terapi akan dikonfirmasi setelah skrining serta verifikasi instruksi medis. Harga dan durasi diinformasikan sebelum kunjungan dikonfirmasi.',
+    includes: ['Skrining awal', 'Verifikasi instruksi medis', 'Konfirmasi rencana layanan'],
+  },
+  {
+    id: 'infus-mual',
+    name: 'Infus Mual',
+    category: 'Terapi Infus',
+    price: null,
+    duration: 'Durasi dikonfirmasi',
+    icon: Syringe,
+    featured: false,
+    requiresScreening: true,
+    short: 'Pengajuan layanan infus untuk keluhan mual, dengan skrining dan verifikasi instruksi medis.',
+    description: 'Ajukan kunjungan untuk keluhan mual. Kebutuhan tindakan dan rincian terapi akan dikonfirmasi setelah skrining serta verifikasi instruksi medis. Harga dan durasi diinformasikan sebelum kunjungan dikonfirmasi.',
+    includes: ['Skrining awal', 'Verifikasi instruksi medis', 'Konfirmasi rencana layanan'],
+  },
+  {
     id: 'perawatan-luka',
     name: 'Perawatan Luka',
     category: 'Wound Care',
@@ -82,4 +108,4 @@ export const services = [
 ]
 
 export const formatRupiah = (value) =>
-  new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(value)
+  value == null ? 'Harga dikonfirmasi' : new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(value)

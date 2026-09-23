@@ -14,7 +14,7 @@ export default function ServiceCard({ service }) {
       <h3 className="mt-2 text-xl font-bold text-slate-900">{service.name}</h3>
       <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">{service.short}</p>
       <div className="mt-5 flex items-center justify-between gap-3 border-t border-slate-100 pt-4">
-        <div><div className="font-extrabold text-slate-900">Mulai {formatRupiah(service.price)}</div><div className="mt-1 flex items-center gap-1 text-xs text-slate-500"><Clock size={13}/> {service.duration}</div></div>
+        <div><div className="font-extrabold text-slate-900">{service.price != null && 'Mulai '}{formatRupiah(service.price)}</div><div className="mt-1 flex items-center gap-1 text-xs text-slate-500"><Clock size={13}/> {service.duration}</div></div>
         <Link to={`/services/${service.id}`} className="grid size-11 shrink-0 place-items-center rounded-full bg-slate-900 text-white transition group-hover:bg-pink-700" aria-label={`Lihat ${service.name}`}><ArrowRight size={18}/></Link>
       </div>
     </article>

@@ -255,7 +255,7 @@ export default function Booking() {
           </p>
           <div className="my-5 border-t border-slate-100" />
           <div className="flex flex-wrap justify-between gap-2 text-sm">
-            <span className="text-slate-500">Estimasi mulai</span>
+            <span className="text-slate-500">{service.price == null ? 'Biaya layanan' : 'Estimasi mulai'}</span>
             <b>{formatRupiah(service.price)}</b>
           </div>
           <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-xs leading-5 text-slate-600">
