@@ -1,7 +1,7 @@
 import BrandMark from './BrandMark';
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-slate-200 bg-white">
+    <footer className="mt-10 border-t sm:mt-20 border-slate-200 bg-white">
       <div className="container-app grid gap-8 py-10 md:grid-cols-2">
         <div>
           <div className="flex items-center gap-2 font-extrabold">

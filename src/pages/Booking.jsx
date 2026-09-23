@@ -73,8 +73,8 @@ export default function Booking() {
 
   if (done)
     return (
-      <section className="container-app max-w-2xl py-20">
-        <div className="card p-8 text-center">
+      <section className="container-app max-w-2xl py-10 sm:py-20">
+        <div className="card p-5 text-center sm:p-8">
           <CheckCircle2 className="mx-auto text-pink-700" size={52} />
           <h1 className="mt-5 text-3xl font-black">Order siap dikirim</h1>
           <p className="mt-3 leading-7 text-slate-600">
@@ -96,10 +96,10 @@ export default function Booking() {
     );
 
   return (
-    <section className="container-app py-14">
+    <section className="container-app py-8 sm:py-14">
       <div className="max-w-2xl">
         <p className="eyebrow">Booking layanan</p>
-        <h1 className="mt-2 text-4xl font-black tracking-tight">
+        <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">
           Jadwalkan kunjungan
         </h1>
         <p className="mt-4 text-slate-600">
@@ -109,9 +109,9 @@ export default function Booking() {
       </div>
       <form
         onSubmit={submit}
-        className="mt-8 grid gap-7 lg:grid-cols-[1fr_360px]"
+        className="mt-8 grid gap-7 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]"
       >
-        <div className="card p-6 sm:p-8">
+        <div className="card min-w-0 p-4 sm:p-8">
           <div className="grid gap-5">
             <label className="grid gap-2">
               <span className="text-sm font-bold">Pilih layanan</span>
@@ -132,6 +132,7 @@ export default function Booking() {
                 <span className="text-sm font-bold">Nama pasien</span>
                 <input
                   required
+                  autoComplete="name"
                   name="patientName"
                   value={form.patientName}
                   onChange={update}
@@ -143,6 +144,8 @@ export default function Booking() {
                 <span className="text-sm font-bold">No. WhatsApp</span>
                 <input
                   required
+                  type="tel"
+                  autoComplete="tel"
                   name="phone"
                   value={form.phone}
                   onChange={update}
@@ -172,6 +175,7 @@ export default function Booking() {
               </span>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <input
+                  aria-label="Link Google Maps"
                   type="url"
                   name="mapLink"
                   value={form.mapLink}
@@ -250,7 +254,7 @@ export default function Booking() {
             {service.short}
           </p>
           <div className="my-5 border-t border-slate-100" />
-          <div className="flex justify-between text-sm">
+          <div className="flex flex-wrap justify-between gap-2 text-sm">
             <span className="text-slate-500">Estimasi mulai</span>
             <b>{formatRupiah(service.price)}</b>
           </div>

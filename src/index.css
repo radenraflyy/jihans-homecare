@@ -48,3 +48,29 @@ button, input, textarea, select { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }
+
+/* Let content shrink within nested grids, including native mobile form controls. */
+.container-app { min-width: 0; }
+main { min-width: 0; overflow-wrap: break-word; }
+main .grid > *, main form label { min-width: 0; }
+main input, main select, main textarea { width: 100%; min-width: 0; max-width: 100%; font-size: 16px; }
+main textarea { resize: vertical; }
+main input:focus-visible, main select:focus-visible, main textarea:focus-visible { outline: 2px solid #be185d; outline-offset: 3px; }
+.btn-primary, .btn-secondary { min-height: 44px; text-align: center; }
+.btn-primary svg, .btn-secondary svg { flex-shrink: 0; }
+@media (hover: none), (pointer: coarse) {
+  .interactive-lift:hover { transform: none; box-shadow: none; }
+}
+@media (max-width: 639px) {
+  input[type="date"] { display: block; min-height: 52px; }
+  .profile-actions { align-items: stretch; flex-direction: column; }
+  .profile-actions .profile-text-link { justify-content: center; min-height: 44px; }
+  .profile-location { font-size: 11px; }
+  .profile-contact .profile-button { width: 100%; }
+  .profile-socials a { min-width: 0; font-size: 13px; }
+  .profile-socials a > span { min-width: 0; overflow-wrap: anywhere; }
+  .profile-socials a > svg { flex-shrink: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .interactive-lift, .btn-primary, .btn-secondary { transition: none; }
+}
