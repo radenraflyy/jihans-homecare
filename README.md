@@ -28,6 +28,13 @@ Build production:
 npm run build
 ```
 
+## Deployment dan direct link
+Deployment Vercel memakai `vercel.json` di root proyek untuk mengarahkan
+request halaman ke `index.html`. React Router kemudian memilih halaman sesuai
+URL, sehingga membuka langsung atau refresh `/profile`, `/booking`,
+`/services/:id`, dan `/dashboard` tidak menghasilkan 404 dari hosting.
+Pastikan file ini ikut di-commit dan di-push, lalu deploy versi terbaru.
+
 ## Catatan implementasi berikutnya
 1. Backend/API + database
 2. Authentication admin/customer
