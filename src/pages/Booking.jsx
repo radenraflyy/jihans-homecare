@@ -16,7 +16,10 @@ const WHATSAPP_NUMBER = "6285126373252";
 
 export default function Booking() {
   const [params] = useSearchParams();
-  const initial = params.get("service") || services[0].id;
+  const requestedService = params.get("service");
+  const normalizedService = ['infus-lambung', 'infus-mual'].includes(requestedService)
+    ? 'infus-lambung-mual' : requestedService;
+  const initial = services.find(item => item.id === normalizedService)?.id || services[0].id;
   const [serviceId, setServiceId] = useState(initial);
   const [form, setForm] = useState(empty);
   const [done, setDone] = useState(false);
@@ -240,7 +243,7 @@ export default function Booking() {
                 onChange={update}
                 rows="4"
                 className="rounded-2xl border border-slate-200 p-3.5"
-                placeholder="Contoh: pasien baru pulang operasi, perlu ganti balutan..."
+                placeholder="Ceritakan keluhan pasien dan kebutuhan kunjungan..."
               />
             </label>
           </div>
